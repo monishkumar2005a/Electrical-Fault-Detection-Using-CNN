@@ -10,13 +10,15 @@ def plot_results(y_test, pred, history):
     plt.title("Confusion Matrix")
     plt.xlabel("Predicted")
     plt.ylabel("Actual")
-    plt.show()
+
+    plt.savefig("images/confusion_matrix.png")
+    plt.close()
 
     plt.figure()
     plt.plot(history.history['loss'])
     plt.plot(history.history['val_loss'])
     plt.legend(['Train','Validation'])
     plt.title("Loss Curve")
-    plt.show()
-plt.savefig("confusion_matrix.png")
-plt.savefig("loss_curve.png")
+
+    plt.savefig("images/loss_curve.png")
+    plt.close()
